@@ -1,0 +1,173 @@
+/*body {
+  font-family: "Sofia";
+  font-size: 20px;
+  background-image: url(imagenes/hello3.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color:white;
+}*/
+body {
+  font-family: "Sofia";
+  font-size: 22px;
+}
+#titulo {
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(45,81,163,1) 35%, rgba(0,212,255,1) 100%);
+  text-align: center;
+  text-shadow: 6px 6px 7px white;
+}		
+.text-3d {
+    margin: 0;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 35px;
+    text-shadow: 6px 6px 7px white;
+    text-transform: uppercase;
+    color:rgb(0, 58, 100);
+    top:50%;
+    left:50%;
+    transform: translate(-50% ,-50%);
+    text-shadow:
+                    0 1px 0 rgb(45,81,163),
+
+    transition: all 0.2s ease-in-out;        
+    cursor: pointer;
+}
+.text-3d1 {
+  margin: 0;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 25px;
+  text-shadow: 6px 6px 7px white;
+  text-transform: uppercase;
+  color:rgb(0, 73, 100);
+  top:50%;
+  left:50%;
+  transform: translate(-50% ,-50%);
+  text-shadow:
+                  0 1px 0 rgb(190,190,190),
+
+  transition: all 0.2s ease-in-out;        
+  cursor: pointer;
+}
+.text-3d:hover {
+    text-shadow:
+                    0 1px 0 rgb(190,190,190),
+                    0 2px 0 rgb(185,185,185),
+                    0 3px 0 rgb(180,180,180),
+                    0 4px 0 rgb(175,175,175),
+                    0 5px 0 rgb(170,170,170),
+                    0 6px 0 rgb(165,165,165),
+                    0 7px 0 rgb(160,160,160),
+                    0 8px 0 rgb(155,155,155),
+                    0 9px 0 rgb(150,150,150),
+                    0 1px 5px rgba(0,0,0,.05),
+                    0 5px 5px rgba(0,0,0,.10),
+                    0 10px 10px rgba(0,0,0,.15),
+                    0 15px 10px rgba(0,0,0,.20),
+                    0 20px 15px rgba(0,0,0,.25);
+    transform: translate(-51%,-51%);
+    transition: all 0.2s ease-in-out;
+}
+.logo-left {
+  background: url(imagenes/logo.png) left top no-repeat;
+  padding: 35px;
+  background-size: 100px, 130px, auto;
+}
+.logo-right {
+  background: url(imagenes/logo.png) right top no-repeat;
+  padding: 35px;
+  background-size: 100px, 130px, auto;
+}
+.box {
+    position: absolute;
+    top: calc(50% - 150px);
+    left: calc(50% - 100px);
+    transform: perspective(1000px) rotateY(-45deg);
+    width: 50px;
+    height: 75px;
+	transform-style: preserve-3d;
+}
+.box::before{
+	content: '';
+	position: absolute;
+	bottom: -100px;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	background: #000;
+	filter: blur(40px);
+	opacity: 0.5;
+	transform: rotateX(90deg);
+}
+.box div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	transform-style: preserve-3d;
+	animation: animate 5s linear infinite;
+}
+.box div span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, #f1f1f1, #bbb, #f1f1f1);
+    border-radius: 20px;
+}
+.box div span:nth-child(1){
+	transform: rotateX(0deg);
+}
+.box div span:nth-child(2){
+	transform: rotateX(45deg);
+}
+.box div span:nth-child(3){
+	transform: rotateX(-45deg);
+}
+.box div span:nth-child(4){
+	transform: rotateX(90deg);
+}
+
+@-webkit-keyframes spinner {
+	from {
+	  -webkit-transform: rotateY(0deg);
+	}
+	to {
+	  -webkit-transform: rotateY(-360deg);
+	}
+  }
+  
+  #stage {
+	margin: 1em auto;
+	-webkit-perspective: 1200px;
+  }
+  
+  #spinner {
+	-webkit-animation-name: spinner;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-duration: 6s;
+	-webkit-transform-style: preserve-3d;
+  }
+  #spinner:hover {
+	-webkit-animation-play-state: paused;
+  }
+  
+  #spinner img {
+	position: absolute;
+	border: 1px solid #ccc;
+	background: rgba(255,255,255,0.8);
+	box-shadow: inset 0 0 20px rgba(0,0,0,0.2);
+  }
+
+
+@keyframes animate{
+	0%{
+		transform: perspective(1000px) rotateX(0deg);
+	}
+	100%{
+		transform: perspective(1000px) rotateX(359deg);
+	}
+}
