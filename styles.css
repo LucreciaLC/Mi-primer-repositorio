@@ -7,10 +7,7 @@
   background-size: cover;
   color:white;
 }*/
-body {
-  font-family: "Sofia";
-  font-size: 22px;
-}
+
 #titulo {
   background: rgb(2,0,36);
   background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(45,81,163,1) 35%, rgba(0,212,255,1) 100%);
